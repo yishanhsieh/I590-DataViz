@@ -1,4 +1,4 @@
-index,Entity,Code,Year,Schizophrenia,Bipolar disorders,Eating disorders,Anxiety disorders,Drug use disorders,Depression,Alcohol use disorders
+index,Country Name,Code,Year,Schizophrenia,Bipolar disorders,Eating disorders,Anxiety disorders,Drug use disorders,Depression,Alcohol use disorders
 0,Afghanistan,AFG,1990,0.16056,0.697779,0.101855,4.82883,1.677082,4.071831,0.672404
 1,Afghanistan,AFG,1991,0.160312,0.697961,0.099313,4.82974,1.684746,4.079531,0.671768
 2,Afghanistan,AFG,1992,0.160135,0.698107,0.096692,4.831108,1.694334,4.088358,0.670644
