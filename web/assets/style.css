@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#title {
+  text-align: center;
+  background-color: #e7ebd4;
+}
+
+#description {
+  font-size: 10pt;
+  color: grey;
+  margin: 0;
+}
+
+#chart {
+  padding: 0 10%;
+  margin: 0;
+}
+
+#method {
+  background-color: #e7ebd4;
+  margin: 0;
+  font-family: "Noto Serif", serif;
+  margin-top: 8px;
+}
+
+li {
+  margin: 8px;
+}
+
+h1 {
+  font-family: "Noto Serif", serif;
+  font-size: 40pt;
+  margin-top: 1%;
+}
+
+h2 {
+  font-family: "Noto Serif", serif;
+  font-size: 18pt;
+}
+
+h3 {
+  font-family: "Noto Serif", serif;
+  font-size: 12pt;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+p {
+  line-height: 1.8;
+}
+
+section {
+  padding: 28px 18%;
+  margin-bottom: 48px 0;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  background-color: #d1e875;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 250px;
+  background-color: black;
+  color: #fff;
+  font-size: 10pt;
+  border-radius: 6px;
+  padding: 8px;
+  position: absolute;
+  z-index: 1;
+  top: 150%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+#method h2,
+h3 {
+  margin-top: 12px;
+}
+
+footer {
+  color: grey;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}

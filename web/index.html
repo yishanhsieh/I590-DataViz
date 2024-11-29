@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Team5-Data Viz Project</title>
+    <link href="assets/style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+  </head>
+
+  <body>
+    <section id="title">
+      <h1>The Richer, The Happier?</h1>
+      <h2>An Exploration of GDP and National Mental Health</h2>
+      <p style="color: grey; font-family: 'Noto Serif'; margin-top: 5pt">
+        Team 5: Kasturi Bharat Disale, Omkar Ashok Korade, Yishan Hsieh
+      </p>
+    </section>
+
+    <section>
+      <p>
+        The World Happiness Report published the world happiness country
+        rankings every year since 2002, and north European Countries, like
+        Finland and Denmark have been ranked the highest for several years.
+        
+        Explore the scatter plot of world happiness and Log GDP, you'll find a trend showing that the happier 
+        countries seem to be well-developed and have higher GDP,
+        but does that mean the higher GDP a country has, the happier their
+        people are?
+      </p>
+
+    </section>
+
+    <iframe
+      id="chart"
+      src="hp_gdp_scatter.html"
+      width="100%"
+      height="600"
+      frameborder="0"
+    ></iframe>
+
+    <section id="description">
+      Notes:
+      <ul>
+        <li>
+          Life Ladder, or Cantril Ladder, is an numerical indicator used in the
+          World Happiness report to evaluate country happiness rankings. The
+          score was collected by asking respondents to evaluate their current
+          life as a whole using the image of a ladder, with the best possible
+          life for them as a 10 and worst possible as a 0. (Helliwell et al.,
+          2023)
+        </li>
+        <li>
+          The GDP level is categorized based on the distribution of Log GDP Per
+          Capita of a country from 2005 to 2021. If the Log GDP Per Capita of a
+          country is higher than 75%, it’s a high GDP level. If it’s between 50%
+          to 75%, it’s a higher-middle GDP level. If it’s between 25% to 50%,
+          it’s a lower-middle GDP level. If it’s below 25%, it’s a low GDP
+          level.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <p>
+        Whether money brings happiness is still in a debate. While some studies
+        agree with the assumption, some research indicates that richer people
+        are more likely to suffer from mental health issues. 
+      </p>
+      
+      <p>Let’s look at the
+        worldwide mental disorders diagnosis percentage from 2006 to 2017,
+        including 
+        <span class='tooltip'>Schizophrenia<span class="tooltiptext">
+          Affects how people think, feel and behave, may result in a mix of hallucinations and delusions.</span>
+          </span>, 
+        <span class='tooltip'>Bipolar disorders<span class='tooltiptext'>
+          Causes unusual shifts in a person’s mood, energy, activity levels, and concentration.</span>
+          </span>, 
+        <span class='tooltip'>Eating disorders<span class='tooltiptext'>
+          Have an unhealthy relationship with food, like anorexia nervosa, bulimia nervosa and binge-eating disorder.</span>
+          </span>, 
+        <span class='tooltip'>Anxiety disorders<span class='tooltiptext'>
+          Frequently have intense, excessive and persistent worry and fear about everyday situations.</span>, 
+          </span>
+        <span class='tooltip'>Drug use disorders<span class='tooltiptext'>
+          Have a problematic pattern of substance use that affects health and quality of life.</span>
+          </span>,
+        <span class='tooltip'>Depression<span class="tooltiptext">
+          Involves a depressed mood or loss of pleasure or interest in activities for long periods of time.</span>
+          </span>, and
+        <span class='tooltip'>Alcohol use disorders<span class='tooltiptext'>
+          Hard to stop or control alcohol use despite adverse social, occupational, or health consequences.</span>.
+          </span>
+      . Select the dropdown menu to switch different disorders. 
+    </p>
+    
+    </section>
+
+    <iframe
+      id="chart"
+      src="avg_disorder_map.html"
+      width="100%"
+      height="600"
+      frameborder="0"
+    ></iframe>
+
+    <section id="description">
+      Notes:
+    </br>Since there is only one country’s data available in 2005, we removed the data in 2005 and start from 2006.
+    </section>
+
+    <section>
+      <p>You may be surprised that those high GDP countries listed as 
+        happiest countries have high mental disorders diagnosis 
+        percentage.  For example, Sweden has a relatively high bipolar 
+        disorders percentage, and United States have relatively high 
+        depression percentage. But, you can also find Morocco, as a 
+        lower-middle GDP country, has high depression percentage.</p> 
+      <br>
+        <p>So, do high GDP countries tend to have more mental disorder diagnosis? Let’s explore the correlation between GDP and seven mental disorders.
+        </p>
+    </section>
+
+    <section>
+      [placeholder -correlation chart of gdp & mental disorder ]
+    </section>
+
+    <section>
+      Let’s look at a country/ some countries …</br>
+      [placeholder –  analysis of  the mental disorder (or other variables) of 1~~2 countries ]
+      
+    </section>
+
+    
+    <section>
+      Conclusion
+      -	From the data analysis, it shows that the top ranked happiest countries don’t represent lower mental disorders. 
+      -	Probably because world happiness ranking is just based on one indicator (life ladder)
+      -	So, we cannot just blindly believe the ranking.
+    </section>
+
+    
+    <section id="method">
+      <h2>Data source</h2>
+        <p>We used two datasets from Kaggle. One is <a href="https://www.kaggle.com/datasets/usamabuttar/world-happiness-report-2005-present" target="_blank">World Happiness Report, 2005-Present</a> uploaded by Usama Buttar compiled from World Happiness Report. The variables include six happiness variables (GDP per capita, social support, healthy life expectancy, freedom, generosity, and corruption) and life ladder score. The other dataset is <a href="https://www.kaggle.com/datasets/thedevastator/global-mental-health-disorders" target="_blank">Global Mental Health Disorder, 2005-2017</a>, was first compiled by Amit from <a href="https://ourworldindata.org/mental-health#all-charts-preview" target="_blank">Our World in Data-Mental health</a>. The dataset contains the prevalence of seven common mental health disorders from various countries around the world. 
+          </p>
+      <h2>Method</h2>
+      <h3>Data Cleaning</h3>
+        <p>First, we removed null value in both datasets. The World Happiness dataset initially has 2199 rows and has 1683 rows left. The Mental Disorder dataset initially has 108,553 rows and has 5,488 rows left. Second, we rename the column names in a camel case style, like ‘year’ to ‘Year’, and synchronize the column refers country name into ‘Country Name’ for both datasets. We also remove the % symbol in the mental disorder column names to ensure simplicity. Additionally, we adjusted the mental disorder percentage, which are numerical values from object into float 64, and converted the data type of column ‘year’  into ‘int64’. After the basic cleaning, we joined the two datasets by inner join on columns ‘country name’ and ‘year’.  The final joined dataset keeps the data from 2005 to 2017, with 1221 entries in total.</p>
+      <h3>Data analysis & vizualization</h3>
+      
+      <h2>Reference</h2>
+        <p>Helliwell, J. F., Huang, H., Norton, M., Goff, L., & Wang, S. (2023). World Happiness, Trust and Social Connections in Times of Crisis. In World Happiness Report 2023 (11th ed., Chapter 2). Sustainable Development Solutions Network. <a target="_blank" href="https://worldhappiness.report/ed/2023/world-happiness-trust-and-social-connections-in-times-of-crisis/
+          " >website</a>
+
+     <section>
+
+  
+
+  </body>
+
+  <footer> 
+    Code on Github 
+    <a href="https://github.com/yishanhsieh/I590-DataViz" target="_blank">
+      <i class="fa fa-github" style="font-size:24px"></i>
+    </a>
+  </footer>
+</html>
