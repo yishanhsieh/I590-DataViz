@@ -110,3 +110,13 @@ footer {
   margin: 0;
   padding: 0;
 }
+
+.img-container {
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin: 5% 0;
+}

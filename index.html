@@ -38,7 +38,7 @@
 
     <iframe
       id="chart"
-      src="./assets/hp_gdp_scatter.html"
+      src="assets/hp_gdp_scatter.html"
       width="100%"
       height="600"
       frameborder="0"
@@ -65,6 +65,10 @@
         </li>
       </ul>
     </section>
+
+   
+
+
 
     <section>
       <p>
@@ -95,54 +99,88 @@
           Involves a depressed mood or loss of pleasure or interest in activities for long periods of time.</span>
           </span>, and
         <span class='tooltip'>Alcohol use disorders<span class='tooltiptext'>
-          Hard to stop or control alcohol use despite adverse social, occupational, or health consequences.</span>.
+          Hard to stop or control alcohol use despite adverse social, occupational, or health consequences.</span>
           </span>
       . Select the dropdown menu to switch different disorders. 
     </p>
     
     </section>
 
+
+    <iframe
+    id="chart"
+    src="assets/md_boxplot.html"
+    width="100%"
+    height="600"
+    frameborder="0"
+  ></iframe>
+  <section id="description">
+    Notes:
+  </br>Since there is only one country’s data available in 2005, we removed the data in 2005 and start from 2006.
+  </section>
+
+  <section>
+    <p>
+      The boxplots revealed a stable distribution of worldwide mental disorders from 2006 to 2017. The annual max, min, and median of each disorder are similar. For Schizophrenia and Eating disorders, there is a trend showing that high GDP level countries have higher diagnosis percentages while low GDP level countries have lower percentages. However, for other disorders, like Depression or Alcohol use disorders, the distribution is more random, and there is no obvious pattern showing the relationship between GDP level and the mental disorder rate.
+    </p>
+    <br>
+    <p>
+      Let’s take a closer look at the country’s level. The choropleth map shows the average diagnosis rate from 2006 to 2017.  
+    </p>
+  </section>
+
     <iframe
       id="chart"
-      src="./assets/avg_disorder_map.html"
+      src="assets/avg_disorder_map.html"
       width="100%"
       height="600"
       frameborder="0"
     ></iframe>
 
-    <section id="description">
-      Notes:
-    </br>Since there is only one country’s data available in 2005, we removed the data in 2005 and start from 2006.
-    </section>
-
+   
     <section>
-      <p>You may be surprised that those high GDP countries listed as 
-        happiest countries have high mental disorders diagnosis 
-        percentage.  For example, Sweden has a relatively high bipolar 
-        disorders percentage, and United States have relatively high 
-        depression percentage. But, you can also find Morocco, as a 
-        lower-middle GDP country, has high depression percentage.</p> 
+      <p>You may be surprised that those high GDP countries listed as happiest countries have high mental disorders diagnosis percentage. For example, Sweden has a relatively high bipolar disorders percentage, but Morocco, as a lower-middle GDP country, has high depression percentage.</p> 
       <br>
-        <p>So, do high GDP countries tend to have more mental disorder diagnosis? Let’s explore the correlation between GDP and seven mental disorders.
+        <p>
+          We can take a deeper look at this tricky fact by comparing two countries. The highest GDP country in 2017, Luxemburg, has much higher Life Ladder score (7.06) than the lowest GDP country, Venezuela(4.27), but Luxemburg has much higher anxiety disorder(5.31) than Venezuela(3.67).
         </p>
+      <div class="img-container">
+        <img src="assets/comparison_1.png">
+      </div>
     </section>
 
     <section>
-      [placeholder -correlation chart of gdp & mental disorder ]
+      <p>
+        On the other hand, country A has lowest GDP in 20xx, but it has high mental disorders…. Or the opposite…
+      </p>
+      <div class="img-container">
+        <img src="assets/comparison_1.png">
+      </div>
+      <br>
+      <p>
+        Interested in making your own comparison? Visit the <a href="#">playground</a>. Input two country names, year, and one mental disorder you are interested in. 
+      </p>
+      <br>
     </section>
 
     <section>
-      Let’s look at a country/ some countries …</br>
-      [placeholder –  analysis of  the mental disorder (or other variables) of 1~~2 countries ]
-      
+      <p>
+        From the above observations, it seems that though some high GDP countries have high life ladder scores, they also suffered from more serious mental disorders, like anxiety and depression. It seems tricky, doesn’t it?
+      </p>
+      <br>
+      <p>
+        So, do high GDP countries tend to have more mental disorder diagnosis? Let’s explore the correlation between GDP and seven mental disorders.
+      </p>
+      <b>[image-correlation]</b>
     </section>
+  
 
     
     <section>
       Conclusion
-      -	From the data analysis, it shows that the top ranked happiest countries don’t represent lower mental disorders. 
-      -	Probably because world happiness ranking is just based on one indicator (life ladder)
-      -	So, we cannot just blindly believe the ranking.
+      <br>-	From the data analysis, it shows that the top ranked happiest countries don’t represent lower mental disorders. 
+      <br>-	Probably because world happiness ranking is just based on one indicator (life ladder)
+      <br>-	So, we cannot just blindly believe the ranking.
     </section>
 
     
