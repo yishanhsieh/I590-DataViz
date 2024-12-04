@@ -31,6 +31,10 @@ li {
   margin: 8px;
 }
 
+ul {
+  padding-left: 12px;
+}
+
 h1 {
   font-family: "Noto Serif", serif;
   font-size: 40pt;

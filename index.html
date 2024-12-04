@@ -212,11 +212,38 @@
       <h2>Data source</h2>
         <p>We used two datasets from Kaggle. One is <a href="https://www.kaggle.com/datasets/usamabuttar/world-happiness-report-2005-present" target="_blank">World Happiness Report, 2005-Present</a> uploaded by Usama Buttar compiled from World Happiness Report. The variables include six happiness variables (GDP per capita, social support, healthy life expectancy, freedom, generosity, and corruption) and life ladder score. The other dataset is <a href="https://www.kaggle.com/datasets/thedevastator/global-mental-health-disorders" target="_blank">Global Mental Health Disorder, 2005-2017</a>, was first compiled by Amit from <a href="https://ourworldindata.org/mental-health#all-charts-preview" target="_blank">Our World in Data-Mental health</a>. The dataset contains the prevalence of seven common mental health disorders from various countries around the world. 
           </p>
+      <br />
       <h2>Method</h2>
-      <h3>Data Cleaning</h3>
+      <h3>Data cleaning</h3>
         <p>First, we removed null value in both datasets. The World Happiness dataset initially has 2199 rows and has 1683 rows left. The Mental Disorder dataset initially has 108,553 rows and has 5,488 rows left. Second, we rename the column names in a camel case style, like ‘year’ to ‘Year’, and synchronize the column refers country name into ‘Country Name’ for both datasets. We also remove the % symbol in the mental disorder column names to ensure simplicity. Additionally, we adjusted the mental disorder percentage, which are numerical values from object into float 64, and converted the data type of column ‘year’  into ‘int64’. After the basic cleaning, we joined the two datasets by inner join on columns ‘country name’ and ‘year’.  The final joined dataset keeps the data from 2005 to 2017, with 1221 entries in total.</p>
-      <h3>Data analysis & vizualization</h3>
-      
+      <br />
+      <h3>Data analysis</h3>
+        <p>We adopted descriptive analysis and correlation analysis. At the EDA phase, we created scattered boxplots, correlation charts and line charts to explore patterns and trends in the two datasets. However, the two datasets include more than twenty variables that may have hidden complicated causation or correlation. To narrow down the research scope, we decided to focus on the GDP, the life ladder, and the seven mental disorders.</p>
+      <br />
+      <h3>Data visualization</h3>
+        <p>Before we proceed into visualization, we created a data story wireframe on Figjam. In the final work, we used Matplotlib, Plotly and Dash framework to create the visualization.</p>
+        <ul>
+          <li><b>Scatter plot</b>: show the trend of the life ladder and GDP levels distribution</li>
+          <li><b>Scattered boxplot</b>: display the worldwide mental disorders trend (boxplot) and provide country-level details (dots).</li>
+          <li><b>Choropleth</b>: give a whole picture of the worldwide average diagnosis rate by equirectangular projection. We selected this projection because it can show entire vertical and horizontal angle of view without causing too much land distortion, so our users can clearly identify the mental disorder value of each country.</li>
+          <li><b>Bar chart</b>: a side-by-side bar chart for country comparison. We provide the code that allows users to compare any two countries’ mental disorder rate, GDP and the life ladder in a selected year.</li>
+          <li><b>Heatmap</b>: show the correlation between mental disorders, GDP, and the life ladder</li>
+          <li><b>Scatter plot (Dash)</b>: Dash frameworks support advanced filtering with simpler code, and we tried using Dash to create an interactive scatter plot that shows the mental disorder changes by years.</li>
+        </ul>
+      <br />
+      <h3>Limitation</h3>
+        <ul>
+          <li>The joined dataset for the GDP and mental disorder analysis covers the years 2005 to 2017, so the results cannot be extrapolated to other time periods.</li>
+          <li>The definition of happiness in this report is limited to seven mental disorders, so the results may not be applicable to scenarios where happiness is defined by additional dimensions.</li>
+        </ul>
+      <br />
+      <h3>Authors</h3>
+        <ul>
+          <li><b>Kasturi – MS. Data Science</b>: Correlation analysis (interactive scatter chart, heatmap), content writing.</li>
+          <li><b>Omkar -  MS. Data Science</b>: Descriptive analysis (interactive bar chart for country comparison), content writing</li>
+          <li><b>Yishan – MS. Informatics</b>: Data cleaning, descriptive analysis (scattered boxplot, scatter plot, choropleth map), web design and development, content writing.</li>
+        </ul>
+      <br />
       <h2>Reference</h2>
         <p>Helliwell, J. F., Huang, H., Norton, M., Goff, L., & Wang, S. (2023). World Happiness, Trust and Social Connections in Times of Crisis. In World Happiness Report 2023 (11th ed., Chapter 2). Sustainable Development Solutions Network. <a target="_blank" href="https://worldhappiness.report/ed/2023/world-happiness-trust-and-social-connections-in-times-of-crisis/
           " >website</a>
