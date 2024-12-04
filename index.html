@@ -116,16 +116,18 @@
   ></iframe>
   <section id="description">
     Notes:
-  </br>Since there is only one country’s data available in 2005, we removed the data in 2005 and start from 2006.
+  <br/>Since there is only one country’s data available in 2005, we removed the data in 2005 and start from 2006.
   </section>
 
   <section>
     <p>
       The boxplots revealed a stable distribution of worldwide mental disorders from 2006 to 2017. The annual max, min, and median of each disorder are similar. For Schizophrenia and Eating disorders, there is a trend showing that high GDP level countries have higher diagnosis percentages while low GDP level countries have lower percentages. However, for other disorders, like Depression or Alcohol use disorders, the distribution is more random, and there is no obvious pattern showing the relationship between GDP level and the mental disorder rate.
     </p>
-    <br>
+   </section> 
+
+   <section>
     <p>
-      Let’s take a closer look at the country’s level. The choropleth map shows the average diagnosis rate from 2006 to 2017.  
+      The choropleth map shows the average diagnosis rate from 2006 to 2017. Select the disorder menu to see the worldwide diagnosis distribution.
     </p>
   </section>
 
@@ -137,50 +139,78 @@
       frameborder="0"
     ></iframe>
 
-   
     <section>
       <p>You may be surprised that those high GDP countries listed as happiest countries have high mental disorders diagnosis percentage. For example, Sweden has a relatively high bipolar disorders percentage, but Morocco, as a lower-middle GDP country, has high depression percentage.</p> 
-      <br>
-        <p>
-          We can take a deeper look at this tricky fact by comparing two countries. The highest GDP country in 2017, Luxemburg, has much higher Life Ladder score (7.06) than the lowest GDP country, Venezuela(4.27), but Luxemburg has much higher anxiety disorder(5.31) than Venezuela(3.67).
+      <br />
+      <p>We can take a deeper look at this tricky fact by comparing two countries at extreme. Luxemburg had highest log GDP per capita in 2017 and had much higher Life Ladder score (7.06) than Venezuela (5.07), which had the lowest log GDP per capita in that year. However, Luxemburg had significantly higher anxiety disorder rate than Venezuela (5.31%) than Venezuela(2.86%).</p>
+    </section>
+
+    <iframe
+    id="chart"
+    src="assets/comparison_chart_Luxembourg_vs_Venezuela.html"
+    width="100%"
+    height="600"
+    frameborder="0"
+  ></iframe>
+
+    <section>
+      <p>
+        On the other hand, Greece(10.26) has a significantly higher GDP per capita compared to Uzbekistan(8.83) in 2017, but Uzbekistan's(6.42) happiness score is higher than Greece's(5.14), and anxiety disorder prevalence is much higher in Greece(5.79%) compared to Uzbekistan(2.56%).
+      </p> 
+    </section>
+
+    <iframe
+      id="chart"
+      src="assets/comparison_chart_Greece_vs_Uzbekistan.html"
+      width="100%"
+      height="600"
+      frameborder="0"
+    ></iframe>
+   
+    <section>
+    <p>The comparison reinforces the idea that economic wealth, as represented by GDP, is not the sole determinant of happiness or mental health outcomes. Countries like Uzbekistan, despite lower GDP, may have stronger societal or cultural factors contributing to higher happiness and lower anxiety. This highlights the need to focus on well-being metrics beyond GDP.</p>
+    <br/>
+    <p>Interested in making your own comparison? Visit the <a href="https://colab.research.google.com/drive/11DWot2rP8YnjRmlPNJQEVIGFR5_Dthxu?usp=sharing" target="_blank">playground</a>. Input two country names, year, and one mental disorder you are interested in.</p>
+
+  </section>   
+
+    <section>
+      <p>
+        From the above observations, it seems that some high GDP countries have higher mental disorders, especially higher anxiety and depression, but there are also exceptions.
+      </p>
+    </br>
+      <p>
+        Let’s find statistical evidence by exploring the correlation between GDP and seven mental disorders.
+      </p>
+      <img src="./assets/heatmap-correlation.png"/>
+      <p>
+        From the heatmap, we found that GDP has a strong correlation with Life Ladder (correlation = 0.8).
+        Mental health disorders exhibit varied relationships with well-being and economic indicators, with Eating disorders(correlation = 0.8) having the most prominent correlations.
+        Alcohol use disorder(correlation = 0.2) and Depression (correlation = 0.1) have the weakest correlations across the board, indicating they might be influenced by more localized or specific factors beyond economic and health metrics.
         </p>
-      <div class="img-container">
-        <img src="assets/comparison_1.png">
-      </div>
-    </section>
-
-    <section>
-      <p>
-        On the other hand, country A has lowest GDP in 20xx, but it has high mental disorders…. Or the opposite…
-      </p>
-      <div class="img-container">
-        <img src="assets/comparison_1.png">
-      </div>
-      <br>
-      <p>
-        Interested in making your own comparison? Visit the <a href="#">playground</a>. Input two country names, year, and one mental disorder you are interested in. 
-      </p>
-      <br>
-    </section>
-
-    <section>
-      <p>
-        From the above observations, it seems that though some high GDP countries have high life ladder scores, they also suffered from more serious mental disorders, like anxiety and depression. It seems tricky, doesn’t it?
-      </p>
-      <br>
-      <p>
-        So, do high GDP countries tend to have more mental disorder diagnosis? Let’s explore the correlation between GDP and seven mental disorders.
-      </p>
-      <b>[image-correlation]</b>
     </section>
   
+    <section>
+      <p>
+        [lack a connection]
+        </p>
+      <p>
+        Venezuela's sharp GDP drop in 2017 was driven by a combination of factors, primarily its worsening economic crisis. A significant decline in oil prices, the country's main revenue source, and collapsing foreign exchange reserves severely impacted its economy. The government's refusal to adjust economic policies, including price controls and currency restrictions, worsened the situation. Additionally, the country faced hyperinflation due to excessive money printing, leading to a dramatic fall in GDP by 16%. The collapse of domestic industries and massive emigration further deepened the crisis
+      </p>
+      <img src="./assets/depression_2008.png"/>
+      <img src="./assets/depression_2017.png"/>
+      <p>
+        In the U.S., drug use disorders increased from 2.97 (2008) to 3.45 (2017), reflecting the impact of the opioid epidemic, which worsened after 2014. Economic struggles following the 2008 financial crisis likely contributed, as did increased awareness and reporting of addiction. The opioid crisis, with rising deaths from opioids and fentanyl, played a key role in this trend, alongside expanded treatment programs and public health efforts to address the epidemic.
+        </p>
+      <img src="./assets/drug_2008.png"/>
+      <img src="./assets/drug_2017.png"/>
+  
+      </section>
 
     
     <section>
       Conclusion
-      <br>-	From the data analysis, it shows that the top ranked happiest countries don’t represent lower mental disorders. 
-      <br>-	Probably because world happiness ranking is just based on one indicator (life ladder)
-      <br>-	So, we cannot just blindly believe the ranking.
+    
     </section>
 
     
